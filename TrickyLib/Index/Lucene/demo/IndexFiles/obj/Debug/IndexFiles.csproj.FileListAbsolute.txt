@@ -1,0 +1,5 @@
+F:\Program\CSharp\Lucene\src\bin\demo\IndexFiles\Debug\NET40\IndexFiles.pdb
+F:\Program\CSharp\Lucene\src\src\demo\IndexFiles\obj\Debug\IndexFiles.csprojResolveAssemblyReference.cache
+F:\Program\CSharp\Lucene\src\src\demo\IndexFiles\obj\Debug\IndexFiles.pdb
+F:\Program\CSharp\Lucene\src\bin\demo\IndexFiles\Debug\NET40\IndexFiles.exe
+F:\Program\CSharp\Lucene\src\src\demo\IndexFiles\obj\Debug\IndexFiles.exe

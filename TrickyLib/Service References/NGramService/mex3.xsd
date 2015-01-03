@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.microsoft.com/research/2009/10/webngram/frontend" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/research/2009/10/webngram/frontend" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://web-ngram.research.microsoft.com/Lookup.svc/mex?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="GetModels">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetModelsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetModelsResult" nillable="true" type="q1:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProbability">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authorizationToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="modelUrn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="phrase" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProbabilityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetProbabilityResult" type="xs:float" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProbabilities">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authorizationToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="modelUrn" nillable="true" type="xs:string" />
+        <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="phrases" nillable="true" type="q2:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProbabilitiesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetProbabilitiesResult" nillable="true" type="q3:ArrayOffloat" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConditionalProbability">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authorizationToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="modelUrn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="phrase" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConditionalProbabilityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetConditionalProbabilityResult" type="xs:float" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConditionalProbabilities">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authorizationToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="modelUrn" nillable="true" type="xs:string" />
+        <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="phrases" nillable="true" type="q4:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConditionalProbabilitiesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetConditionalProbabilitiesResult" nillable="true" type="q5:ArrayOffloat" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

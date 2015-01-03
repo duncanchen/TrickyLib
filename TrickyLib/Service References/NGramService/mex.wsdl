@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://schemas.microsoft.com/research/2009/10/webngram/frontend" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://schemas.microsoft.com/research/2009/10/webngram/frontend" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://schemas.microsoft.com/research/2009/10/webngram/frontend/Imports">
+      <xsd:import schemaLocation="http://web-ngram.research.microsoft.com/Lookup.svc/mex?xsd=xsd0" namespace="http://schemas.microsoft.com/research/2009/10/webngram/frontend" />
+      <xsd:import schemaLocation="http://web-ngram.research.microsoft.com/Lookup.svc/mex?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://web-ngram.research.microsoft.com/Lookup.svc/mex?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://web-ngram.research.microsoft.com/Lookup.svc/mex?xsd=xsd3" namespace="http://schemas.microsoft.com/research/2009/10/webngram/fault" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ILookupService_GetModels_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetModels" />
+  </wsdl:message>
+  <wsdl:message name="ILookupService_GetModels_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetModelsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILookupService_GetProbability_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProbability" />
+  </wsdl:message>
+  <wsdl:message name="ILookupService_GetProbability_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProbabilityResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILookupService_GetProbability_ServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.microsoft.com/research/2009/10/webngram/fault" name="detail" element="q1:ServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="ILookupService_GetProbabilities_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProbabilities" />
+  </wsdl:message>
+  <wsdl:message name="ILookupService_GetProbabilities_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProbabilitiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILookupService_GetProbabilities_ServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.microsoft.com/research/2009/10/webngram/fault" name="detail" element="q2:ServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="ILookupService_GetConditionalProbability_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConditionalProbability" />
+  </wsdl:message>
+  <wsdl:message name="ILookupService_GetConditionalProbability_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConditionalProbabilityResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILookupService_GetConditionalProbability_ServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.microsoft.com/research/2009/10/webngram/fault" name="detail" element="q3:ServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="ILookupService_GetConditionalProbabilities_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConditionalProbabilities" />
+  </wsdl:message>
+  <wsdl:message name="ILookupService_GetConditionalProbabilities_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConditionalProbabilitiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILookupService_GetConditionalProbabilities_ServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.microsoft.com/research/2009/10/webngram/fault" name="detail" element="q4:ServiceFault" />
+  </wsdl:message>
+  <wsdl:portType name="ILookupService">
+    <wsdl:operation name="GetModels">
+      <wsdl:input wsaw:Action="http://schemas.microsoft.com/research/2009/10/webngram/frontend/ILookupService/GetModels" message="tns:ILookupService_GetModels_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.microsoft.com/research/2009/10/webngram/frontend/ILookupService/GetModelsResponse" message="tns:ILookupService_GetModels_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProbability">
+      <wsdl:input wsaw:Action="http://schemas.microsoft.com/research/2009/10/webngram/frontend/ILookupService/GetProbability" message="tns:ILookupService_GetProbability_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.microsoft.com/research/2009/10/webngram/frontend/ILookupService/GetProbabilityResponse" message="tns:ILookupService_GetProbability_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.microsoft.com/research/2009/10/webngram/frontend/ILookupService/GetProbabilityServiceFaultFault" name="ServiceFaultFault" message="tns:ILookupService_GetProbability_ServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProbabilities">
+      <wsdl:input wsaw:Action="http://schemas.microsoft.com/research/2009/10/webngram/frontend/ILookupService/GetProbabilities" message="tns:ILookupService_GetProbabilities_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.microsoft.com/research/2009/10/webngram/frontend/ILookupService/GetProbabilitiesResponse" message="tns:ILookupService_GetProbabilities_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.microsoft.com/research/2009/10/webngram/frontend/ILookupService/GetProbabilitiesServiceFaultFault" name="ServiceFaultFault" message="tns:ILookupService_GetProbabilities_ServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConditionalProbability">
+      <wsdl:input wsaw:Action="http://schemas.microsoft.com/research/2009/10/webngram/frontend/ILookupService/GetConditionalProbability" message="tns:ILookupService_GetConditionalProbability_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.microsoft.com/research/2009/10/webngram/frontend/ILookupService/GetConditionalProbabilityResponse" message="tns:ILookupService_GetConditionalProbability_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.microsoft.com/research/2009/10/webngram/frontend/ILookupService/GetConditionalProbabilityServiceFaultFault" name="ServiceFaultFault" message="tns:ILookupService_GetConditionalProbability_ServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConditionalProbabilities">
+      <wsdl:input wsaw:Action="http://schemas.microsoft.com/research/2009/10/webngram/frontend/ILookupService/GetConditionalProbabilities" message="tns:ILookupService_GetConditionalProbabilities_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.microsoft.com/research/2009/10/webngram/frontend/ILookupService/GetConditionalProbabilitiesResponse" message="tns:ILookupService_GetConditionalProbabilities_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.microsoft.com/research/2009/10/webngram/frontend/ILookupService/GetConditionalProbabilitiesServiceFaultFault" name="ServiceFaultFault" message="tns:ILookupService_GetConditionalProbabilities_ServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

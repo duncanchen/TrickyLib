@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="971c4deb-8554-49c5-93a5-db1aa34228bd" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://msraml-s003/ngram-lm/weblm.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="weblm.wsdl" MetadataType="Wsdl" ID="b03c189e-ec91-4637-9c91-d32045a7e0e9" SourceId="1" SourceUrl="http://msraml-s003/ngram-lm/weblm.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="WiabService.wsdl" MetadataType="Wsdl" ID="89ee30fd-9b9c-4488-bf36-7396311d6f5b" SourceId="1" SourceUrl="http://msraml-s003/ngram-lm/weblm.svc?wsdl" />
+    <MetadataFile FileName="weblm.disco" MetadataType="Disco" ID="f419e00f-e22d-480c-af8d-59cf6aa095a7" SourceId="1" SourceUrl="http://msraml-s003/ngram-lm/weblm.svc?disco" />
+    <MetadataFile FileName="weblm.xsd" MetadataType="Schema" ID="933f893a-f828-4eba-bd4f-1f668d817d3b" SourceId="1" SourceUrl="http://msraml-s003/ngram-lm/weblm.svc?xsd=xsd3" />
+    <MetadataFile FileName="weblm1.xsd" MetadataType="Schema" ID="5db8b349-a743-429f-ae04-c0c025e7e5f8" SourceId="1" SourceUrl="http://msraml-s003/ngram-lm/weblm.svc?xsd=xsd2" />
+    <MetadataFile FileName="weblm2.xsd" MetadataType="Schema" ID="539f036f-6bde-4ced-9e41-97743ac55d45" SourceId="1" SourceUrl="http://msraml-s003/ngram-lm/weblm.svc?xsd=xsd1" />
+    <MetadataFile FileName="weblm3.xsd" MetadataType="Schema" ID="1b64023e-bd4b-400e-92da-008e9e97992b" SourceId="1" SourceUrl="http://msraml-s003/ngram-lm/weblm.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

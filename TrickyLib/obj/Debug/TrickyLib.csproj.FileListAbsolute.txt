@@ -1,0 +1,2 @@
+D:\programs\TrickLib\TrickyLib\obj\Debug\TrickyLib.csprojResolveAssemblyReference.cache
+D:\programs\TrickLib\TrickyLib\obj\Debug\TrickyLib.csproj.ResolveComReference.cache

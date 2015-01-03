@@ -1,0 +1,1619 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5253EB1D-605B-4656-9226-636E59241DC5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TrickyLib</RootNamespace>
+    <AssemblyName>TrickyLib</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommandLine">
+      <HintPath>F:\Tools\FastRank\TLC\CommandLine.dll</HintPath>
+    </Reference>
+    <Reference Include="FastRankMerged">
+      <HintPath>F:\Tools\FastRank\TLC\FastRankMerged.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Core, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resource\ikvm\IKVM.OpenJDK.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Jdbc, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resource\ikvm\IKVM.OpenJDK.Jdbc.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Text, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resource\ikvm\IKVM.OpenJDK.Text.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Util, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resource\ikvm\IKVM.OpenJDK.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.API, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resource\ikvm\IKVM.OpenJDK.XML.API.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.Runtime, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resource\ikvm\IKVM.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="KenelNLP">
+      <HintPath>..\..\Lucene\src\src\core\Resource\KenelNLP.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="OpenNLP">
+      <HintPath>Resource\SharpNLP\SharpNLP\OpenNLP.dll</HintPath>
+    </Reference>
+    <Reference Include="Segment_Refine_Trans, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resource\Segment_Refine_Trans.dll</HintPath>
+    </Reference>
+    <Reference Include="stanford-parser, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resource\stanford\stanford-parser.dll</HintPath>
+      <Aliases>parser</Aliases>
+    </Reference>
+    <Reference Include="stanford-postagger, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resource\stanford\stanford-postagger.dll</HintPath>
+      <Aliases>postagger</Aliases>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Services.Client" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TMSNlearnPrediction">
+      <HintPath>F:\Tools\FastRank\TLC\TMSNlearnPrediction.dll</HintPath>
+    </Reference>
+    <Reference Include="TMSNStreams">
+      <HintPath>F:\Tools\FastRank\TLC\TMSNStreams.dll</HintPath>
+    </Reference>
+    <Reference Include="Vectors">
+      <HintPath>F:\Tools\FastRank\TLC\Vectors.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Converter\NumberConverter.cs" />
+    <Compile Include="CustomControl\PropertyGrid\ComboBox\EnumGridComboBox.cs" />
+    <Compile Include="CustomControl\PropertyGrid\ComboBox\GridComboBox.cs" />
+    <Compile Include="CustomControl\PropertyGrid\ComboBox\ListGridComboBox.cs" />
+    <Compile Include="CustomControl\PropertyGrid\ComboBox\OrderedDisplayNameAttribute.cs" />
+    <Compile Include="CustomControl\PropertyGrid\Data\DataListAttribute.cs" />
+    <Compile Include="CustomControl\PropertyGrid\Data\EnumListAttribute.cs" />
+    <Compile Include="CustomControl\PropertyGrid\Data\IAddNew.cs" />
+    <Compile Include="CustomControl\PropertyGrid\Data\ListAttribute.cs" />
+    <Compile Include="CustomControl\PropertyGrid\FileBrowser\CustomFileNameEditor.cs" />
+    <Compile Include="CustomControl\PropertyGrid\FileBrowser\FilterAttribute.cs" />
+    <Compile Include="CustomControl\PropertyGrid\FileBrowser\MultiSelectAttribute.cs" />
+    <Compile Include="CustomControl\PropertyGrid\ObjectCreatedEventArgs.cs" />
+    <Compile Include="CustomControl\PropertyGrid\PropertyGridControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\PropertyGrid\Rule\LengthRuleAttribute.cs" />
+    <Compile Include="CustomControl\PropertyGrid\Rule\PatternRuleAttribute.cs" />
+    <Compile Include="CustomControl\PropertyGrid\Rule\RuleBaseAttribute.cs" />
+    <Compile Include="CustomControl\PropertyGrid\Utility\ClassType.cs" />
+    <Compile Include="CustomControl\PropertyGrid\Utility\PathParser.cs" />
+    <Compile Include="CustomControl\PropertyGrid\Utility\Property.cs" />
+    <Compile Include="CustomControl\PropertyGrid\Utility\Reflect.cs" />
+    <Compile Include="CustomControl\StatusStrip\PercentageStatusStrip.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\StatusStrip\PercentageStatusStrip.Designer.cs">
+      <DependentUpon>PercentageStatusStrip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extension\ArrayExtension.cs" />
+    <Compile Include="Extension\ComparisonExtension.cs" />
+    <Compile Include="Extension\DictionaryExtension.cs" />
+    <Compile Include="Extension\HashExtension.cs" />
+    <Compile Include="Extension\ListExtension.cs" />
+    <Compile Include="Extension\Number.cs" />
+    <Compile Include="Extension\MatrixOperatorExtension.cs" />
+    <Compile Include="Extension\RandomExtension.cs" />
+    <Compile Include="Extension\StreamIO.cs" />
+    <Compile Include="Extension\StringExtention.cs" />
+    <Compile Include="Extension\XmlExtension.cs" />
+    <Compile Include="Index\BaseLuceneIndexBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Index\IndexBuilder.cs" />
+    <Compile Include="Index\IndexGenerator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Index\Lucene\core\Analysis\Analyzer.cs" />
+    <Compile Include="Index\Lucene\core\Analysis\ASCIIFoldingFilter.cs" />
+    <Compile Include="Index\Lucene\core\Analysis\BaseCharFilter.cs" />
+    <Compile Include="Index\Lucene\core\Analysis\CachingTokenFilter.cs" />
+    <Compile Include="Index\Lucene\core\Analysis\CharArraySet.cs" />
+    <Compile Include="Index\Lucene\core\Analysis\CharFilter.cs" />
+    <Compile Include="Index\Lucene\core\Analysis\CharReader.cs" />
+    <Compile Include="Index\Lucene\core\Analysis\CharStream.cs" />
+    <Compile Include="Index\Lucene\core\Analysis\CharTokenizer.cs" />
+    <Compile Include="Index\Lucene\core\Analysis\ChineseWorkTokenizer.cs" />
+    <Compile Include="Index\Lucene\core\Analysis\ISOLatin1AccentFilter.cs" />
+    <Compile Include="Index\Lucene\core\Analysis\KeywordAnalyzer.cs" />
+    <Compile Include="Index\Lucene\core\Analysis\KeywordTokenizer.cs" />
+    <Compile Include="Index\Lucene\core\Analysis\LengthFilter.cs" />
+    <Compile Include="Index\Lucene\core\Analysis\LetterTokenizer.cs" />
+    <Compile Include="Index\Lucene\core\Analysis\LowerCaseFilter.cs" />
+    <Compile Include="Index\Lucene\core\Analysis\LowerCaseTokenizer.cs" />
+    <Compile Include="Index\Lucene\core\Analysis\MappingCharFilter.cs" />
+    <Compile Include="Index\Lucene\core\Analysis\NormalizeCharMap.cs" />
+    <Compile Include="Index\Lucene\core\Analysis\NumericTokenStream.cs" />
+    <Compile Include="Index\Lucene\core\Analysis\PerFieldAnalyzerWrapper.cs" />
+    <Compile Include="Index\Lucene\core\Analysis\PorterStemFilter.cs" />
+    <Compile Include="Index\Lucene\core\Analysis\PorterStemmer.cs" />
+    <Compile Include="Index\Lucene\core\Analysis\SimpleAnalyzer.cs" />
+    <Compile Include="Index\Lucene\core\Analysis\Standard\StandardAnalyzer.cs" />
+    <Compile Include="Index\Lucene\core\Analysis\Standard\StandardFilter.cs" />
+    <Compile Include="Index\Lucene\core\Analysis\Standard\StandardTokenizer.cs" />
+    <Compile Include="Index\Lucene\core\Analysis\Standard\StandardTokenizerImpl.cs" />
+    <Compile Include="Index\Lucene\core\Analysis\StopAnalyzer.cs" />
+    <Compile Include="Index\Lucene\core\Analysis\StopFilter.cs" />
+    <Compile Include="Index\Lucene\core\Analysis\TeeSinkTokenFilter.cs" />
+    <Compile Include="Index\Lucene\core\Analysis\Token.cs" />
+    <Compile Include="Index\Lucene\core\Analysis\Tokenattributes\FlagsAttribute.cs" />
+    <Compile Include="Index\Lucene\core\Analysis\Tokenattributes\IFlagsAttribute.cs" />
+    <Compile Include="Index\Lucene\core\Analysis\Tokenattributes\IOffsetAttribute.cs" />
+    <Compile Include="Index\Lucene\core\Analysis\Tokenattributes\IPayloadAttribute.cs" />
+    <Compile Include="Index\Lucene\core\Analysis\Tokenattributes\IPositionIncrementAttribute.cs" />
+    <Compile Include="Index\Lucene\core\Analysis\Tokenattributes\ITermAttribute.cs" />
+    <Compile Include="Index\Lucene\core\Analysis\Tokenattributes\ITypeAttribute.cs" />
+    <Compile Include="Index\Lucene\core\Analysis\Tokenattributes\OffsetAttribute.cs" />
+    <Compile Include="Index\Lucene\core\Analysis\Tokenattributes\PayloadAttribute.cs" />
+    <Compile Include="Index\Lucene\core\Analysis\Tokenattributes\PositionIncrementAttribute.cs" />
+    <Compile Include="Index\Lucene\core\Analysis\Tokenattributes\TermAttribute.cs" />
+    <Compile Include="Index\Lucene\core\Analysis\Tokenattributes\TypeAttribute.cs" />
+    <Compile Include="Index\Lucene\core\Analysis\TokenFilter.cs" />
+    <Compile Include="Index\Lucene\core\Analysis\Tokenizer.cs" />
+    <Compile Include="Index\Lucene\core\Analysis\TokenStream.cs" />
+    <Compile Include="Index\Lucene\core\Analysis\WhitespaceAnalyzer.cs" />
+    <Compile Include="Index\Lucene\core\Analysis\WhitespaceTokenizer.cs" />
+    <Compile Include="Index\Lucene\core\Analysis\WordlistLoader.cs" />
+    <Compile Include="Index\Lucene\core\Document\AbstractField.cs" />
+    <Compile Include="Index\Lucene\core\Document\CompressionTools.cs" />
+    <Compile Include="Index\Lucene\core\Document\DateField.cs" />
+    <Compile Include="Index\Lucene\core\Document\DateTools.cs" />
+    <Compile Include="Index\Lucene\core\Document\Document.cs" />
+    <Compile Include="Index\Lucene\core\Document\Field.cs" />
+    <Compile Include="Index\Lucene\core\Document\Fieldable.cs" />
+    <Compile Include="Index\Lucene\core\Document\FieldSelector.cs" />
+    <Compile Include="Index\Lucene\core\Document\FieldSelectorResult.cs" />
+    <Compile Include="Index\Lucene\core\Document\LoadFirstFieldSelector.cs" />
+    <Compile Include="Index\Lucene\core\Document\MapFieldSelector.cs" />
+    <Compile Include="Index\Lucene\core\Document\NumberTools.cs" />
+    <Compile Include="Index\Lucene\core\Document\NumericField.cs" />
+    <Compile Include="Index\Lucene\core\Document\SetBasedFieldSelector.cs" />
+    <Compile Include="Index\Lucene\core\Index\AbstractAllTermDocs.cs" />
+    <Compile Include="Index\Lucene\core\Index\AllTermDocs.cs" />
+    <Compile Include="Index\Lucene\core\Index\BufferedDeletes.cs" />
+    <Compile Include="Index\Lucene\core\Index\ByteBlockPool.cs" />
+    <Compile Include="Index\Lucene\core\Index\ByteSliceReader.cs" />
+    <Compile Include="Index\Lucene\core\Index\ByteSliceWriter.cs" />
+    <Compile Include="Index\Lucene\core\Index\CharBlockPool.cs" />
+    <Compile Include="Index\Lucene\core\Index\CheckIndex.cs" />
+    <Compile Include="Index\Lucene\core\Index\CompoundFileReader.cs" />
+    <Compile Include="Index\Lucene\core\Index\CompoundFileWriter.cs" />
+    <Compile Include="Index\Lucene\core\Index\ConcurrentMergeScheduler.cs" />
+    <Compile Include="Index\Lucene\core\Index\CorruptIndexException.cs" />
+    <Compile Include="Index\Lucene\core\Index\DefaultSkipListReader.cs" />
+    <Compile Include="Index\Lucene\core\Index\DefaultSkipListWriter.cs" />
+    <Compile Include="Index\Lucene\core\Index\DirectoryReader.cs" />
+    <Compile Include="Index\Lucene\core\Index\DocConsumer.cs" />
+    <Compile Include="Index\Lucene\core\Index\DocConsumerPerThread.cs" />
+    <Compile Include="Index\Lucene\core\Index\DocFieldConsumer.cs" />
+    <Compile Include="Index\Lucene\core\Index\DocFieldConsumerPerField.cs" />
+    <Compile Include="Index\Lucene\core\Index\DocFieldConsumerPerThread.cs" />
+    <Compile Include="Index\Lucene\core\Index\DocFieldConsumers.cs" />
+    <Compile Include="Index\Lucene\core\Index\DocFieldConsumersPerField.cs" />
+    <Compile Include="Index\Lucene\core\Index\DocFieldConsumersPerThread.cs" />
+    <Compile Include="Index\Lucene\core\Index\DocFieldProcessor.cs" />
+    <Compile Include="Index\Lucene\core\Index\DocFieldProcessorPerField.cs" />
+    <Compile Include="Index\Lucene\core\Index\DocFieldProcessorPerThread.cs" />
+    <Compile Include="Index\Lucene\core\Index\DocInverter.cs" />
+    <Compile Include="Index\Lucene\core\Index\DocInverterPerField.cs" />
+    <Compile Include="Index\Lucene\core\Index\DocInverterPerThread.cs" />
+    <Compile Include="Index\Lucene\core\Index\DocumentsWriter.cs" />
+    <Compile Include="Index\Lucene\core\Index\DocumentsWriterThreadState.cs" />
+    <Compile Include="Index\Lucene\core\Index\FieldInfo.cs" />
+    <Compile Include="Index\Lucene\core\Index\FieldInfos.cs" />
+    <Compile Include="Index\Lucene\core\Index\FieldInvertState.cs" />
+    <Compile Include="Index\Lucene\core\Index\FieldReaderException.cs" />
+    <Compile Include="Index\Lucene\core\Index\FieldSortedTermVectorMapper.cs" />
+    <Compile Include="Index\Lucene\core\Index\FieldsReader.cs" />
+    <Compile Include="Index\Lucene\core\Index\FieldsWriter.cs" />
+    <Compile Include="Index\Lucene\core\Index\FilterIndexReader.cs" />
+    <Compile Include="Index\Lucene\core\Index\FormatPostingsDocsConsumer.cs" />
+    <Compile Include="Index\Lucene\core\Index\FormatPostingsDocsWriter.cs" />
+    <Compile Include="Index\Lucene\core\Index\FormatPostingsFieldsConsumer.cs" />
+    <Compile Include="Index\Lucene\core\Index\FormatPostingsFieldsWriter.cs" />
+    <Compile Include="Index\Lucene\core\Index\FormatPostingsPositionsConsumer.cs" />
+    <Compile Include="Index\Lucene\core\Index\FormatPostingsPositionsWriter.cs" />
+    <Compile Include="Index\Lucene\core\Index\FormatPostingsTermsConsumer.cs" />
+    <Compile Include="Index\Lucene\core\Index\FormatPostingsTermsWriter.cs" />
+    <Compile Include="Index\Lucene\core\Index\FreqProxFieldMergeState.cs" />
+    <Compile Include="Index\Lucene\core\Index\FreqProxTermsWriter.cs" />
+    <Compile Include="Index\Lucene\core\Index\FreqProxTermsWriterPerField.cs" />
+    <Compile Include="Index\Lucene\core\Index\FreqProxTermsWriterPerThread.cs" />
+    <Compile Include="Index\Lucene\core\Index\IndexCommit.cs" />
+    <Compile Include="Index\Lucene\core\Index\IndexDeletionPolicy.cs" />
+    <Compile Include="Index\Lucene\core\Index\IndexFileDeleter.cs" />
+    <Compile Include="Index\Lucene\core\Index\IndexFileNameFilter.cs" />
+    <Compile Include="Index\Lucene\core\Index\IndexFileNames.cs" />
+    <Compile Include="Index\Lucene\core\Index\IndexReader.cs" />
+    <Compile Include="Index\Lucene\core\Index\IndexWriter.cs" />
+    <Compile Include="Index\Lucene\core\Index\IntBlockPool.cs" />
+    <Compile Include="Index\Lucene\core\Index\InvertedDocConsumer.cs" />
+    <Compile Include="Index\Lucene\core\Index\InvertedDocConsumerPerField.cs" />
+    <Compile Include="Index\Lucene\core\Index\InvertedDocConsumerPerThread.cs" />
+    <Compile Include="Index\Lucene\core\Index\InvertedDocEndConsumer.cs" />
+    <Compile Include="Index\Lucene\core\Index\InvertedDocEndConsumerPerField.cs" />
+    <Compile Include="Index\Lucene\core\Index\InvertedDocEndConsumerPerThread.cs" />
+    <Compile Include="Index\Lucene\core\Index\KeepOnlyLastCommitDeletionPolicy.cs" />
+    <Compile Include="Index\Lucene\core\Index\LogByteSizeMergePolicy.cs" />
+    <Compile Include="Index\Lucene\core\Index\LogDocMergePolicy.cs" />
+    <Compile Include="Index\Lucene\core\Index\LogMergePolicy.cs" />
+    <Compile Include="Index\Lucene\core\Index\MergeDocIDRemapper.cs" />
+    <Compile Include="Index\Lucene\core\Index\MergePolicy.cs" />
+    <Compile Include="Index\Lucene\core\Index\MergeScheduler.cs" />
+    <Compile Include="Index\Lucene\core\Index\MultiLevelSkipListReader.cs" />
+    <Compile Include="Index\Lucene\core\Index\MultiLevelSkipListWriter.cs" />
+    <Compile Include="Index\Lucene\core\Index\MultipleTermPositions.cs" />
+    <Compile Include="Index\Lucene\core\Index\MultiReader.cs" />
+    <Compile Include="Index\Lucene\core\Index\NormsWriter.cs" />
+    <Compile Include="Index\Lucene\core\Index\NormsWriterPerField.cs" />
+    <Compile Include="Index\Lucene\core\Index\NormsWriterPerThread.cs" />
+    <Compile Include="Index\Lucene\core\Index\ParallelReader.cs" />
+    <Compile Include="Index\Lucene\core\Index\Payload.cs" />
+    <Compile Include="Index\Lucene\core\Index\PositionBasedTermVectorMapper.cs" />
+    <Compile Include="Index\Lucene\core\Index\RawPostingList.cs" />
+    <Compile Include="Index\Lucene\core\Index\ReadOnlyDirectoryReader.cs" />
+    <Compile Include="Index\Lucene\core\Index\ReadOnlySegmentReader.cs" />
+    <Compile Include="Index\Lucene\core\Index\ReusableStringReader.cs" />
+    <Compile Include="Index\Lucene\core\Index\SegmentInfo.cs" />
+    <Compile Include="Index\Lucene\core\Index\SegmentInfos.cs" />
+    <Compile Include="Index\Lucene\core\Index\SegmentMergeInfo.cs" />
+    <Compile Include="Index\Lucene\core\Index\SegmentMergeQueue.cs" />
+    <Compile Include="Index\Lucene\core\Index\SegmentMerger.cs" />
+    <Compile Include="Index\Lucene\core\Index\SegmentReader.cs" />
+    <Compile Include="Index\Lucene\core\Index\SegmentTermDocs.cs" />
+    <Compile Include="Index\Lucene\core\Index\SegmentTermEnum.cs" />
+    <Compile Include="Index\Lucene\core\Index\SegmentTermPositions.cs" />
+    <Compile Include="Index\Lucene\core\Index\SegmentTermPositionVector.cs" />
+    <Compile Include="Index\Lucene\core\Index\SegmentTermVector.cs" />
+    <Compile Include="Index\Lucene\core\Index\SegmentWriteState.cs" />
+    <Compile Include="Index\Lucene\core\Index\SerialMergeScheduler.cs" />
+    <Compile Include="Index\Lucene\core\Index\SnapshotDeletionPolicy.cs" />
+    <Compile Include="Index\Lucene\core\Index\SortedTermVectorMapper.cs" />
+    <Compile Include="Index\Lucene\core\Index\StaleReaderException.cs" />
+    <Compile Include="Index\Lucene\core\Index\StoredFieldsWriter.cs" />
+    <Compile Include="Index\Lucene\core\Index\StoredFieldsWriterPerThread.cs" />
+    <Compile Include="Index\Lucene\core\Index\Term.cs" />
+    <Compile Include="Index\Lucene\core\Index\TermBuffer.cs" />
+    <Compile Include="Index\Lucene\core\Index\TermDocs.cs" />
+    <Compile Include="Index\Lucene\core\Index\TermEnum.cs" />
+    <Compile Include="Index\Lucene\core\Index\TermFreqVector.cs" />
+    <Compile Include="Index\Lucene\core\Index\TermInfo.cs" />
+    <Compile Include="Index\Lucene\core\Index\TermInfosReader.cs" />
+    <Compile Include="Index\Lucene\core\Index\TermInfosWriter.cs" />
+    <Compile Include="Index\Lucene\core\Index\TermPositions.cs" />
+    <Compile Include="Index\Lucene\core\Index\TermPositionVector.cs" />
+    <Compile Include="Index\Lucene\core\Index\TermsHash.cs" />
+    <Compile Include="Index\Lucene\core\Index\TermsHashConsumer.cs" />
+    <Compile Include="Index\Lucene\core\Index\TermsHashConsumerPerField.cs" />
+    <Compile Include="Index\Lucene\core\Index\TermsHashConsumerPerThread.cs" />
+    <Compile Include="Index\Lucene\core\Index\TermsHashPerField.cs" />
+    <Compile Include="Index\Lucene\core\Index\TermsHashPerThread.cs" />
+    <Compile Include="Index\Lucene\core\Index\TermVectorEntry.cs" />
+    <Compile Include="Index\Lucene\core\Index\TermVectorEntryFreqSortedComparator.cs" />
+    <Compile Include="Index\Lucene\core\Index\TermVectorMapper.cs" />
+    <Compile Include="Index\Lucene\core\Index\TermVectorOffsetInfo.cs" />
+    <Compile Include="Index\Lucene\core\Index\TermVectorsReader.cs" />
+    <Compile Include="Index\Lucene\core\Index\TermVectorsTermsWriter.cs" />
+    <Compile Include="Index\Lucene\core\Index\TermVectorsTermsWriterPerField.cs" />
+    <Compile Include="Index\Lucene\core\Index\TermVectorsTermsWriterPerThread.cs" />
+    <Compile Include="Index\Lucene\core\Index\TermVectorsWriter.cs" />
+    <Compile Include="Index\Lucene\core\LucenePackage.cs" />
+    <Compile Include="Index\Lucene\core\Messages\INLSException.cs" />
+    <Compile Include="Index\Lucene\core\Messages\Message.cs" />
+    <Compile Include="Index\Lucene\core\Messages\MessageImpl.cs" />
+    <Compile Include="Index\Lucene\core\Messages\NLS.cs" />
+    <Compile Include="Index\Lucene\core\QueryParser\CharStream.cs" />
+    <Compile Include="Index\Lucene\core\QueryParser\FastCharStream.cs" />
+    <Compile Include="Index\Lucene\core\QueryParser\MultiFieldQueryParser.cs" />
+    <Compile Include="Index\Lucene\core\QueryParser\ParseException.cs" />
+    <Compile Include="Index\Lucene\core\QueryParser\QueryParser.cs" />
+    <Compile Include="Index\Lucene\core\QueryParser\QueryParserConstants.cs" />
+    <Compile Include="Index\Lucene\core\QueryParser\QueryParserTokenManager.cs" />
+    <Compile Include="Index\Lucene\core\QueryParser\Token.cs" />
+    <Compile Include="Index\Lucene\core\QueryParser\TokenMgrError.cs" />
+    <Compile Include="Index\Lucene\core\Search\BooleanClause.cs" />
+    <Compile Include="Index\Lucene\core\Search\BooleanQuery.cs" />
+    <Compile Include="Index\Lucene\core\Search\BooleanScorer.cs" />
+    <Compile Include="Index\Lucene\core\Search\BooleanScorer2.cs" />
+    <Compile Include="Index\Lucene\core\Search\CachingSpanFilter.cs" />
+    <Compile Include="Index\Lucene\core\Search\CachingWrapperFilter.cs" />
+    <Compile Include="Index\Lucene\core\Search\Collector.cs" />
+    <Compile Include="Index\Lucene\core\Search\ComplexExplanation.cs" />
+    <Compile Include="Index\Lucene\core\Search\ConjunctionScorer.cs" />
+    <Compile Include="Index\Lucene\core\Search\ConstantScoreQuery.cs" />
+    <Compile Include="Index\Lucene\core\Search\DefaultSimilarity.cs" />
+    <Compile Include="Index\Lucene\core\Search\DisjunctionMaxQuery.cs" />
+    <Compile Include="Index\Lucene\core\Search\DisjunctionMaxScorer.cs" />
+    <Compile Include="Index\Lucene\core\Search\DisjunctionSumScorer.cs" />
+    <Compile Include="Index\Lucene\core\Search\DocIdSet.cs" />
+    <Compile Include="Index\Lucene\core\Search\DocIdSetIterator.cs" />
+    <Compile Include="Index\Lucene\core\Search\ExactPhraseScorer.cs" />
+    <Compile Include="Index\Lucene\core\Search\Explanation.cs" />
+    <Compile Include="Index\Lucene\core\Search\FieldCache.cs" />
+    <Compile Include="Index\Lucene\core\Search\FieldCacheImpl.cs" />
+    <Compile Include="Index\Lucene\core\Search\FieldCacheRangeFilter.cs" />
+    <Compile Include="Index\Lucene\core\Search\FieldCacheTermsFilter.cs" />
+    <Compile Include="Index\Lucene\core\Search\FieldComparator.cs" />
+    <Compile Include="Index\Lucene\core\Search\FieldComparatorSource.cs" />
+    <Compile Include="Index\Lucene\core\Search\FieldDoc.cs" />
+    <Compile Include="Index\Lucene\core\Search\FieldDocSortedHitQueue.cs" />
+    <Compile Include="Index\Lucene\core\Search\FieldValueHitQueue.cs" />
+    <Compile Include="Index\Lucene\core\Search\Filter.cs" />
+    <Compile Include="Index\Lucene\core\Search\FilteredDocIdSet.cs" />
+    <Compile Include="Index\Lucene\core\Search\FilteredDocIdSetIterator.cs" />
+    <Compile Include="Index\Lucene\core\Search\FilteredQuery.cs" />
+    <Compile Include="Index\Lucene\core\Search\FilteredTermEnum.cs" />
+    <Compile Include="Index\Lucene\core\Search\FilterManager.cs" />
+    <Compile Include="Index\Lucene\core\Search\Function\ByteFieldSource.cs" />
+    <Compile Include="Index\Lucene\core\Search\Function\CustomScoreProvider.cs" />
+    <Compile Include="Index\Lucene\core\Search\Function\CustomScoreQuery.cs" />
+    <Compile Include="Index\Lucene\core\Search\Function\DocValues.cs" />
+    <Compile Include="Index\Lucene\core\Search\Function\FieldCacheSource.cs" />
+    <Compile Include="Index\Lucene\core\Search\Function\FieldScoreQuery.cs" />
+    <Compile Include="Index\Lucene\core\Search\Function\FloatFieldSource.cs" />
+    <Compile Include="Index\Lucene\core\Search\Function\IntFieldSource.cs" />
+    <Compile Include="Index\Lucene\core\Search\Function\OrdFieldSource.cs" />
+    <Compile Include="Index\Lucene\core\Search\Function\ReverseOrdFieldSource.cs" />
+    <Compile Include="Index\Lucene\core\Search\Function\ShortFieldSource.cs" />
+    <Compile Include="Index\Lucene\core\Search\Function\ValueSource.cs" />
+    <Compile Include="Index\Lucene\core\Search\Function\ValueSourceQuery.cs" />
+    <Compile Include="Index\Lucene\core\Search\FuzzyQuery.cs" />
+    <Compile Include="Index\Lucene\core\Search\FuzzyTermEnum.cs" />
+    <Compile Include="Index\Lucene\core\Search\HitQueue.cs" />
+    <Compile Include="Index\Lucene\core\Search\IndexSearcher.cs" />
+    <Compile Include="Index\Lucene\core\Search\MatchAllDocsQuery.cs" />
+    <Compile Include="Index\Lucene\core\Search\MultiPhraseQuery.cs" />
+    <Compile Include="Index\Lucene\core\Search\MultiSearcher.cs" />
+    <Compile Include="Index\Lucene\core\Search\MultiTermQuery.cs" />
+    <Compile Include="Index\Lucene\core\Search\MultiTermQueryWrapperFilter.cs" />
+    <Compile Include="Index\Lucene\core\Search\NumericRangeFilter.cs" />
+    <Compile Include="Index\Lucene\core\Search\NumericRangeQuery.cs" />
+    <Compile Include="Index\Lucene\core\Search\ParallelMultiSearcher.cs" />
+    <Compile Include="Index\Lucene\core\Search\Payloads\AveragePayloadFunction.cs" />
+    <Compile Include="Index\Lucene\core\Search\Payloads\MaxPayloadFunction.cs" />
+    <Compile Include="Index\Lucene\core\Search\Payloads\MinPayloadFunction.cs" />
+    <Compile Include="Index\Lucene\core\Search\Payloads\PayloadFunction.cs" />
+    <Compile Include="Index\Lucene\core\Search\Payloads\PayloadNearQuery.cs" />
+    <Compile Include="Index\Lucene\core\Search\Payloads\PayloadSpanUtil.cs" />
+    <Compile Include="Index\Lucene\core\Search\Payloads\PayloadTermQuery.cs" />
+    <Compile Include="Index\Lucene\core\Search\PhrasePositions.cs" />
+    <Compile Include="Index\Lucene\core\Search\PhraseQuery.cs" />
+    <Compile Include="Index\Lucene\core\Search\PhraseQueue.cs" />
+    <Compile Include="Index\Lucene\core\Search\PhraseScorer.cs" />
+    <Compile Include="Index\Lucene\core\Search\PositiveScoresOnlyCollector.cs" />
+    <Compile Include="Index\Lucene\core\Search\PrefixFilter.cs" />
+    <Compile Include="Index\Lucene\core\Search\PrefixQuery.cs" />
+    <Compile Include="Index\Lucene\core\Search\PrefixTermEnum.cs" />
+    <Compile Include="Index\Lucene\core\Search\Query.cs" />
+    <Compile Include="Index\Lucene\core\Search\QueryTermVector.cs" />
+    <Compile Include="Index\Lucene\core\Search\QueryWrapperFilter.cs" />
+    <Compile Include="Index\Lucene\core\Search\ReqExclScorer.cs" />
+    <Compile Include="Index\Lucene\core\Search\ReqOptSumScorer.cs" />
+    <Compile Include="Index\Lucene\core\Search\ScoreCachingWrappingScorer.cs" />
+    <Compile Include="Index\Lucene\core\Search\ScoreDoc.cs" />
+    <Compile Include="Index\Lucene\core\Search\Scorer.cs" />
+    <Compile Include="Index\Lucene\core\Search\Searchable.cs" />
+    <Compile Include="Index\Lucene\core\Search\Searcher.cs" />
+    <Compile Include="Index\Lucene\core\Search\Similarity.cs" />
+    <Compile Include="Index\Lucene\core\Search\SimilarityDelegator.cs" />
+    <Compile Include="Index\Lucene\core\Search\SingleTermEnum.cs" />
+    <Compile Include="Index\Lucene\core\Search\SloppyPhraseScorer.cs" />
+    <Compile Include="Index\Lucene\core\Search\Sort.cs" />
+    <Compile Include="Index\Lucene\core\Search\SortField.cs" />
+    <Compile Include="Index\Lucene\core\Search\SpanFilter.cs" />
+    <Compile Include="Index\Lucene\core\Search\SpanFilterResult.cs" />
+    <Compile Include="Index\Lucene\core\Search\SpanQueryFilter.cs" />
+    <Compile Include="Index\Lucene\core\Search\Spans\FieldMaskingSpanQuery.cs" />
+    <Compile Include="Index\Lucene\core\Search\Spans\NearSpansOrdered.cs" />
+    <Compile Include="Index\Lucene\core\Search\Spans\NearSpansUnordered.cs" />
+    <Compile Include="Index\Lucene\core\Search\Spans\SpanFirstQuery.cs" />
+    <Compile Include="Index\Lucene\core\Search\Spans\SpanNearQuery.cs" />
+    <Compile Include="Index\Lucene\core\Search\Spans\SpanNotQuery.cs" />
+    <Compile Include="Index\Lucene\core\Search\Spans\SpanOrQuery.cs" />
+    <Compile Include="Index\Lucene\core\Search\Spans\SpanQuery.cs" />
+    <Compile Include="Index\Lucene\core\Search\Spans\Spans.cs" />
+    <Compile Include="Index\Lucene\core\Search\Spans\SpanScorer.cs" />
+    <Compile Include="Index\Lucene\core\Search\Spans\SpanTermQuery.cs" />
+    <Compile Include="Index\Lucene\core\Search\Spans\SpanWeight.cs" />
+    <Compile Include="Index\Lucene\core\Search\Spans\TermSpans.cs" />
+    <Compile Include="Index\Lucene\core\Search\TermQuery.cs" />
+    <Compile Include="Index\Lucene\core\Search\TermRangeFilter.cs" />
+    <Compile Include="Index\Lucene\core\Search\TermRangeQuery.cs" />
+    <Compile Include="Index\Lucene\core\Search\TermRangeTermEnum.cs" />
+    <Compile Include="Index\Lucene\core\Search\TermScorer.cs" />
+    <Compile Include="Index\Lucene\core\Search\TimeLimitingCollector.cs" />
+    <Compile Include="Index\Lucene\core\Search\TopDocs.cs" />
+    <Compile Include="Index\Lucene\core\Search\TopDocsCollector.cs" />
+    <Compile Include="Index\Lucene\core\Search\TopFieldCollector.cs" />
+    <Compile Include="Index\Lucene\core\Search\TopFieldDocs.cs" />
+    <Compile Include="Index\Lucene\core\Search\TopScoreDocCollector.cs" />
+    <Compile Include="Index\Lucene\core\Search\Weight.cs" />
+    <Compile Include="Index\Lucene\core\Search\WildcardQuery.cs" />
+    <Compile Include="Index\Lucene\core\Search\WildcardTermEnum.cs" />
+    <Compile Include="Index\Lucene\core\Store\AlreadyClosedException.cs" />
+    <Compile Include="Index\Lucene\core\Store\BufferedIndexInput.cs" />
+    <Compile Include="Index\Lucene\core\Store\BufferedIndexOutput.cs" />
+    <Compile Include="Index\Lucene\core\Store\CheckSumIndexInput.cs" />
+    <Compile Include="Index\Lucene\core\Store\CheckSumIndexOutput.cs" />
+    <Compile Include="Index\Lucene\core\Store\Directory.cs" />
+    <Compile Include="Index\Lucene\core\Store\FileSwitchDirectory.cs" />
+    <Compile Include="Index\Lucene\core\Store\FSDirectory.cs" />
+    <Compile Include="Index\Lucene\core\Store\FSLockFactory.cs" />
+    <Compile Include="Index\Lucene\core\Store\IndexInput.cs" />
+    <Compile Include="Index\Lucene\core\Store\IndexOutput.cs" />
+    <Compile Include="Index\Lucene\core\Store\Lock.cs" />
+    <Compile Include="Index\Lucene\core\Store\LockFactory.cs" />
+    <Compile Include="Index\Lucene\core\Store\LockObtainFailedException.cs" />
+    <Compile Include="Index\Lucene\core\Store\LockReleaseFailedException.cs" />
+    <Compile Include="Index\Lucene\core\Store\LockStressTest.cs" />
+    <Compile Include="Index\Lucene\core\Store\LockVerifyServer.cs" />
+    <Compile Include="Index\Lucene\core\Store\MMapDirectory.cs" />
+    <Compile Include="Index\Lucene\core\Store\NativeFSLockFactory.cs" />
+    <Compile Include="Index\Lucene\core\Store\NIOFSDirectory.cs" />
+    <Compile Include="Index\Lucene\core\Store\NoLockFactory.cs" />
+    <Compile Include="Index\Lucene\core\Store\NoSuchDirectoryException.cs" />
+    <Compile Include="Index\Lucene\core\Store\RAMDirectory.cs" />
+    <Compile Include="Index\Lucene\core\Store\RAMFile.cs" />
+    <Compile Include="Index\Lucene\core\Store\RAMInputStream.cs" />
+    <Compile Include="Index\Lucene\core\Store\RAMOutputStream.cs" />
+    <Compile Include="Index\Lucene\core\Store\SimpleFSDirectory.cs" />
+    <Compile Include="Index\Lucene\core\Store\SimpleFSLockFactory.cs" />
+    <Compile Include="Index\Lucene\core\Store\SingleInstanceLockFactory.cs" />
+    <Compile Include="Index\Lucene\core\Store\VerifyingLockFactory.cs" />
+    <Compile Include="Index\Lucene\core\Support\AppSettings.cs" />
+    <Compile Include="Index\Lucene\core\Support\AttributeImplItem.cs" />
+    <Compile Include="Index\Lucene\core\Support\BitSetSupport.cs" />
+    <Compile Include="Index\Lucene\core\Support\BuildType.cs" />
+    <Compile Include="Index\Lucene\core\Support\Character.cs" />
+    <Compile Include="Index\Lucene\core\Support\CloseableThreadLocalProfiler.cs" />
+    <Compile Include="Index\Lucene\core\Support\CollectionsHelper.cs" />
+    <Compile Include="Index\Lucene\core\Support\Compare.cs" />
+    <Compile Include="Index\Lucene\core\Support\Compatibility\ConcurrentDictionary.cs" />
+    <Compile Include="Index\Lucene\core\Support\Compatibility\Func.cs" />
+    <Compile Include="Index\Lucene\core\Support\Compatibility\ISet.cs" />
+    <Compile Include="Index\Lucene\core\Support\Compatibility\SetFactory.cs" />
+    <Compile Include="Index\Lucene\core\Support\Compatibility\SortedSet.cs" />
+    <Compile Include="Index\Lucene\core\Support\Compatibility\ThreadLocal.cs" />
+    <Compile Include="Index\Lucene\core\Support\Compatibility\WrappedHashSet.cs" />
+    <Compile Include="Index\Lucene\core\Support\CRC32.cs" />
+    <Compile Include="Index\Lucene\core\Support\Cryptography.cs" />
+    <Compile Include="Index\Lucene\core\Support\Deflater.cs" />
+    <Compile Include="Index\Lucene\core\Support\Double.cs" />
+    <Compile Include="Index\Lucene\core\Support\EquatableList.cs" />
+    <Compile Include="Index\Lucene\core\Support\FileSupport.cs" />
+    <Compile Include="Index\Lucene\core\Support\GeneralKeyedCollection.cs" />
+    <Compile Include="Index\Lucene\core\Support\HashMap.cs" />
+    <Compile Include="Index\Lucene\core\Support\IChecksum.cs" />
+    <Compile Include="Index\Lucene\core\Support\Inflater.cs" />
+    <Compile Include="Index\Lucene\core\Support\IThreadRunnable.cs" />
+    <Compile Include="Index\Lucene\core\Support\Number.cs" />
+    <Compile Include="Index\Lucene\core\Support\OS.cs" />
+    <Compile Include="Index\Lucene\core\Support\SharpZipLib.cs" />
+    <Compile Include="Index\Lucene\core\Support\Single.cs" />
+    <Compile Include="Index\Lucene\core\Support\TextSupport.cs" />
+    <Compile Include="Index\Lucene\core\Support\ThreadClass.cs" />
+    <Compile Include="Index\Lucene\core\Support\ThreadLock.cs" />
+    <Compile Include="Index\Lucene\core\Support\WeakDictionary.cs" />
+    <Compile Include="Index\Lucene\core\Util\ArrayUtil.cs" />
+    <Compile Include="Index\Lucene\core\Util\Attribute.cs" />
+    <Compile Include="Index\Lucene\core\Util\AttributeSource.cs" />
+    <Compile Include="Index\Lucene\core\Util\AverageGuessMemoryModel.cs" />
+    <Compile Include="Index\Lucene\core\Util\BitUtil.cs" />
+    <Compile Include="Index\Lucene\core\Util\BitVector.cs" />
+    <Compile Include="Index\Lucene\core\Util\Cache\Cache.cs" />
+    <Compile Include="Index\Lucene\core\Util\Cache\SimpleLRUCache.cs" />
+    <Compile Include="Index\Lucene\core\Util\Cache\SimpleMapCache.cs" />
+    <Compile Include="Index\Lucene\core\Util\CloseableThreadLocal.cs" />
+    <Compile Include="Index\Lucene\core\Util\Constants.cs" />
+    <Compile Include="Index\Lucene\core\Util\DocIdBitSet.cs" />
+    <Compile Include="Index\Lucene\core\Util\FieldCacheSanityChecker.cs" />
+    <Compile Include="Index\Lucene\core\Util\IAttribute.cs" />
+    <Compile Include="Index\Lucene\core\Util\IdentityDictionary.cs" />
+    <Compile Include="Index\Lucene\core\Util\IndexableBinaryStringTools.cs" />
+    <Compile Include="Index\Lucene\core\Util\MapOfSets.cs" />
+    <Compile Include="Index\Lucene\core\Util\MemoryModel.cs" />
+    <Compile Include="Index\Lucene\core\Util\NumericUtils.cs" />
+    <Compile Include="Index\Lucene\core\Util\OpenBitSet.cs" />
+    <Compile Include="Index\Lucene\core\Util\OpenBitSetDISI.cs" />
+    <Compile Include="Index\Lucene\core\Util\OpenBitSetIterator.cs" />
+    <Compile Include="Index\Lucene\core\Util\PriorityQueue.cs" />
+    <Compile Include="Index\Lucene\core\Util\RamUsageEstimator.cs" />
+    <Compile Include="Index\Lucene\core\Util\ReaderUtil.cs" />
+    <Compile Include="Index\Lucene\core\Util\ScorerDocQueue.cs" />
+    <Compile Include="Index\Lucene\core\Util\SimpleStringInterner.cs" />
+    <Compile Include="Index\Lucene\core\Util\SmallFloat.cs" />
+    <Compile Include="Index\Lucene\core\Util\SortedVIntList.cs" />
+    <Compile Include="Index\Lucene\core\Util\SorterTemplate.cs" />
+    <Compile Include="Index\Lucene\core\Util\StringHelper.cs" />
+    <Compile Include="Index\Lucene\core\Util\StringInterner.cs" />
+    <Compile Include="Index\Lucene\core\Util\ToStringUtils.cs" />
+    <Compile Include="Index\Lucene\core\Util\UnicodeUtil.cs" />
+    <Compile Include="Index\Lucene\core\Util\Version.cs" />
+    <Compile Include="Index\Lucene\contribution\Snowball\Lucene.Net\Analysis\Snowball\SnowballAnalyzer.cs" />
+    <Compile Include="Index\Lucene\contribution\Snowball\Lucene.Net\Analysis\Snowball\SnowballFilter.cs" />
+    <Compile Include="Index\Lucene\contribution\Snowball\SF\Snowball\Among.cs" />
+    <Compile Include="Index\Lucene\contribution\Snowball\SF\Snowball\Ext\DanishStemmer.cs" />
+    <Compile Include="Index\Lucene\contribution\Snowball\SF\Snowball\Ext\DutchStemmer.cs" />
+    <Compile Include="Index\Lucene\contribution\Snowball\SF\Snowball\Ext\EnglishStemmer.cs" />
+    <Compile Include="Index\Lucene\contribution\Snowball\SF\Snowball\Ext\FinnishStemmer.cs" />
+    <Compile Include="Index\Lucene\contribution\Snowball\SF\Snowball\Ext\FrenchStemmer.cs" />
+    <Compile Include="Index\Lucene\contribution\Snowball\SF\Snowball\Ext\German2Stemmer.cs" />
+    <Compile Include="Index\Lucene\contribution\Snowball\SF\Snowball\Ext\GermanStemmer.cs" />
+    <Compile Include="Index\Lucene\contribution\Snowball\SF\Snowball\Ext\HungarianStemmer.cs" />
+    <Compile Include="Index\Lucene\contribution\Snowball\SF\Snowball\Ext\ItalianStemmer.cs" />
+    <Compile Include="Index\Lucene\contribution\Snowball\SF\Snowball\Ext\KpStemmer.cs" />
+    <Compile Include="Index\Lucene\contribution\Snowball\SF\Snowball\Ext\LingoStemmer.cs" />
+    <Compile Include="Index\Lucene\contribution\Snowball\SF\Snowball\Ext\LovinsStemmer.cs" />
+    <Compile Include="Index\Lucene\contribution\Snowball\SF\Snowball\Ext\NorwegianStemmer.cs" />
+    <Compile Include="Index\Lucene\contribution\Snowball\SF\Snowball\Ext\PorterStemmer.cs" />
+    <Compile Include="Index\Lucene\contribution\Snowball\SF\Snowball\Ext\PortugueseStemmer.cs" />
+    <Compile Include="Index\Lucene\contribution\Snowball\SF\Snowball\Ext\RomanianStemmer.cs" />
+    <Compile Include="Index\Lucene\contribution\Snowball\SF\Snowball\Ext\RussianStemmer.cs" />
+    <Compile Include="Index\Lucene\contribution\Snowball\SF\Snowball\Ext\SpanishStemmer.cs" />
+    <Compile Include="Index\Lucene\contribution\Snowball\SF\Snowball\Ext\SwedishStemmer.cs" />
+    <Compile Include="Index\Lucene\contribution\Snowball\SF\Snowball\Ext\TurkishStemmer.cs" />
+    <Compile Include="Index\Lucene\contribution\Snowball\SF\Snowball\SnowballProgram.cs" />
+    <Compile Include="Index\Lucene\contribution\Snowball\SF\Snowball\TestApp.cs" />
+    <Compile Include="Index\QA_Index\QAPair_LuceneIndexBuilder.cs" />
+    <Compile Include="Index\QA_Index\QueryLog_LuceneIndexBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Index\QA_Index\Quora_LuceneIndexBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Index\QA_Index\Zhihu_LuceneIndexBuilder.cs" />
+    <Compile Include="IO\ConsoleReader.cs" />
+    <Compile Include="IO\FilePath.cs" />
+    <Compile Include="IO\LogFile.cs" />
+    <Compile Include="IO\Wipe.cs" />
+    <Compile Include="MachineLearning\Algorithm\KMeans.cs" />
+    <Compile Include="MachineLearning\Feature.cs" />
+    <Compile Include="MachineLearning\FeatureFactory.cs" />
+    <Compile Include="IO\ConsoleWriter.cs" />
+    <Compile Include="IO\FileReader.cs" />
+    <Compile Include="IO\FileWriter.cs" />
+    <Compile Include="MachineLearning\FeatureFileConvert\FeatureDescription.cs" />
+    <Compile Include="MachineLearning\FeatureFileConvert\FeatureConverter.cs" />
+    <Compile Include="MachineLearning\FeatureFileConvert\ArffConverter.cs" />
+    <Compile Include="MachineLearning\FeatureFileConvert\BaseFeatureFileConvertor.cs" />
+    <Compile Include="MachineLearning\FeatureFileConvert\FeatureFileConvertor.cs" />
+    <Compile Include="MachineLearning\FeatureFileProcessor.cs" />
+    <Compile Include="MachineLearning\FeatureLine.cs" />
+    <Compile Include="MachineLearning\FeatureVector.cs" />
+    <Compile Include="MachineLearning\Tools\BaseAPI.cs" />
+    <Compile Include="MachineLearning\Tools\BaseExperimentSetting.cs" />
+    <Compile Include="MachineLearning\Tools\API_ThreadPool.cs" />
+    <Compile Include="MachineLearning\Tools\API_Thread.cs" />
+    <Compile Include="MachineLearning\Tools\BaseParameterCombination.cs" />
+    <Compile Include="MachineLearning\Tools\BaseParameterSetting.cs" />
+    <Compile Include="MachineLearning\SVMModel.cs" />
+    <Compile Include="Calculator.cs" />
+    <Compile Include="MachineLearning\Tools\MetricSetting.cs" />
+    <Compile Include="MachineLearning\Tools\SvmLight\SvmLightAPI.cs" />
+    <Compile Include="MachineLearning\Tools\SvmLight\SvmLightParameterCombination.cs" />
+    <Compile Include="MachineLearning\Tools\SvmLight\SvmLightParameterSetting.cs" />
+    <Compile Include="MachineLearning\Tools\TLC\TlcAPI.cs" />
+    <Compile Include="MachineLearning\Tools\TLC\TlcParameterCombination.cs" />
+    <Compile Include="MachineLearning\Tools\TLC\TlcParameterSetting.cs" />
+    <Compile Include="MachineLearning\Tools\TrainFileSetting.cs" />
+    <Compile Include="MachineLearning\TrainTestResult.cs" />
+    <Compile Include="MachineLearning\Utility.cs" />
+    <Compile Include="Parameters.cs" />
+    <Compile Include="Parser\BaiduZhidao\BaiduZhidaoParser.cs" />
+    <Compile Include="Parser\BaiduZhidao\DataStructure.cs" />
+    <Compile Include="Parser\CodeParser.cs" />
+    <Compile Include="Parser\Html\crc32.cs" />
+    <Compile Include="Parser\Html\EncodingFoundException.cs" />
+    <Compile Include="Parser\Html\HtmlAttribute.cs" />
+    <Compile Include="Parser\Html\HtmlAttributeCollection.cs" />
+    <Compile Include="Parser\Html\HtmlCmdLine.cs" />
+    <Compile Include="Parser\Html\HtmlCommentNode.cs" />
+    <Compile Include="Parser\Html\HtmlConsoleListener.cs" />
+    <Compile Include="Parser\Html\HtmlDocument.cs" />
+    <Compile Include="Parser\Html\HtmlDocument.Xpath.cs" />
+    <Compile Include="Parser\Html\HtmlElementFlag.cs" />
+    <Compile Include="Parser\Html\HtmlEntity.cs" />
+    <Compile Include="Parser\Html\HtmlNameTable.cs" />
+    <Compile Include="Parser\Html\HtmlNode.cs" />
+    <Compile Include="Parser\Html\HtmlNode.Dynamic.cs" />
+    <Compile Include="Parser\Html\HtmlNode.Xpath.cs" />
+    <Compile Include="Parser\Html\HtmlNodeCollection.cs" />
+    <Compile Include="Parser\Html\HtmlNodeNavigator.cs" />
+    <Compile Include="Parser\Html\HtmlNodeType.cs" />
+    <Compile Include="Parser\Html\HtmlParseError.cs" />
+    <Compile Include="Parser\Html\HtmlParseErrorCode.cs" />
+    <Compile Include="Parser\Html\HtmlTextNode.cs" />
+    <Compile Include="Parser\Html\HtmlWeb.cs" />
+    <Compile Include="Parser\Html\HtmlWeb.Xpath.cs" />
+    <Compile Include="Parser\Html\HtmlWebException.cs" />
+    <Compile Include="Parser\Html\IHtmlBaseNode.cs" />
+    <Compile Include="Parser\Html\IOLibrary.cs" />
+    <Compile Include="Parser\Html\MixedCodeDocument.cs" />
+    <Compile Include="Parser\Html\MixedCodeDocumentCodeFragment.cs" />
+    <Compile Include="Parser\Html\MixedCodeDocumentFragment.cs" />
+    <Compile Include="Parser\Html\MixedCodeDocumentFragmentList.cs" />
+    <Compile Include="Parser\Html\MixedCodeDocumentFragmentType.cs" />
+    <Compile Include="Parser\Html\MixedCodeDocumentTextFragment.cs" />
+    <Compile Include="Parser\Html\NameValuePair.cs" />
+    <Compile Include="Parser\Html\NameValuePairList.cs" />
+    <Compile Include="Parser\Html\Trace.cs" />
+    <Compile Include="Parser\Html\Trace.FullFramework.cs" />
+    <Compile Include="Parser\Html\Utilities.cs" />
+    <Compile Include="Parser\Json\JsonHelper.cs" />
+    <Compile Include="Parser\Json\JsonArray.cs" />
+    <Compile Include="Parser\Json\JsonContainer.cs" />
+    <Compile Include="Parser\Json\JsonObject.cs" />
+    <Compile Include="Parser\Json\JsonStringGenerator.cs" />
+    <Compile Include="Parser\Json\JsonParser.cs" />
+    <Compile Include="Parser\NLParser.cs" />
+    <Compile Include="Parser\ParserUtility.cs" />
+    <Compile Include="Parser\Stanford\StanfordParser.cs" />
+    <Compile Include="Parser\Stanford\StanfordTagger.cs" />
+    <Compile Include="Parser\TypeConverter.cs" />
+    <Compile Include="Parser\HtmlParser.cs" />
+    <Compile Include="Parser\SerializeParser.cs" />
+    <Compile Include="Parser\YahooAnswer\DataStructure.cs" />
+    <Compile Include="Parser\YahooAnswer\YahooAnswerParser.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Reflection\DynamicClass.cs" />
+    <Compile Include="Reflection\ReflectionHandler.cs" />
+    <Compile Include="RegularExpressions.cs" />
+    <Compile Include="Relevance\BM25.cs" />
+    <Compile Include="Relevance\DependencyModel.cs" />
+    <Compile Include="Relevance\KMP.cs" />
+    <Compile Include="Relevance\LCS.cs" />
+    <Compile Include="Relevance\Matching.cs" />
+    <Compile Include="Relevance\Metric\MRR.cs" />
+    <Compile Include="Relevance\Metric\PrecisionRecallFMeasure.cs" />
+    <Compile Include="Relevance\Metric\BaseRankMetric.cs" />
+    <Compile Include="Relevance\Metric\MAP.cs" />
+    <Compile Include="Relevance\Metric\MetricUtility.cs" />
+    <Compile Include="Relevance\Metric\RankPrecision.cs" />
+    <Compile Include="Relevance\Metric\RWA.cs" />
+    <Compile Include="Relevance\Metric\NDCG.cs" />
+    <Compile Include="Relevance\Metric\R_Precision.cs" />
+    <Compile Include="Relevance\Simlarity\StringSimilarity.cs" />
+    <Compile Include="Relevance\TFIDF.cs" />
+    <Compile Include="Resource\ResourceReader.cs" />
+    <Compile Include="SearchEngine\BingSearchContainer.cs" />
+    <Compile Include="SearchEngine\SearchEngineParser.cs" />
+    <Compile Include="SearchEngine\SearchKeyword.cs" />
+    <Compile Include="Service References\NGramLmService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\NGramService2\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\NGramService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service\NGramHandler.cs" />
+    <Compile Include="Service\QuerySegmentation\QSinfo.cs" />
+    <Compile Include="Service\QuerySegmentation\QS_FeatureVector.cs" />
+    <Compile Include="Service\QuerySegmentation\QuerySegmentor.cs" />
+    <Compile Include="Service\Scope.cs" />
+    <Compile Include="Service\SoftwareOperator.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sort\Heap.cs" />
+    <Compile Include="Sort\Sorter.cs" />
+    <Compile Include="Statistics\ArgumentValidator.cs" />
+    <Compile Include="Relevance\Simlarity\DoubleSimilarity.cs" />
+    <Compile Include="Statistics\Beta.cs" />
+    <Compile Include="Statistics\Chi2.cs" />
+    <Compile Include="Statistics\Chi2TestGoodnessOfFit.cs" />
+    <Compile Include="Statistics\ConfidenceInterval.cs" />
+    <Compile Include="Statistics\F.cs" />
+    <Compile Include="Statistics\Gamma.cs" />
+    <Compile Include="Statistics\Gaussian.cs" />
+    <Compile Include="Statistics\GetMeanFromList.cs" />
+    <Compile Include="Statistics\GetVarianceFromList.cs" />
+    <Compile Include="Statistics\MeanVariance.cs" />
+    <Compile Include="Statistics\Poisson.cs" />
+    <Compile Include="Statistics\PowerAnalysisNormalDist.cs" />
+    <Compile Include="Statistics\T.cs" />
+    <Compile Include="Statistics\TestStatistic.cs" />
+    <Compile Include="Statistics\TTests.cs" />
+    <Compile Include="Statistics\Util.cs" />
+    <Compile Include="StringOperator.cs" />
+    <Compile Include="Struct\Pair.cs" />
+    <Compile Include="Struct\TestStruct.cs" />
+    <Compile Include="Threading\CompThreadPool.cs" />
+    <Compile Include="Threading\ThreadPool.cs" />
+    <Compile Include="ThrowHelper.cs" />
+    <Compile Include="TotalUtility.cs" />
+    <Compile Include="Weatoo\Tlc\PerformanceCalculator_ThreadPool.cs" />
+    <Compile Include="Weatoo\Tlc\TlcPerformanceSetting.cs" />
+    <Compile Include="Weatoo\ToolControl\FeatureFileGenPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Weatoo\ToolControl\FeatureFileGenPanel.Designer.cs">
+      <DependentUpon>FeatureFileGenPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Weatoo\ToolControl\FileCheckListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Weatoo\ToolControl\FileCheckListForm.Designer.cs">
+      <DependentUpon>FileCheckListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Weatoo\ToolControl\LatexConverterPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Weatoo\ToolControl\LatexConverterPanel.Designer.cs">
+      <DependentUpon>LatexConverterPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Weatoo\ToolControl\PerformanceComparer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Weatoo\ToolControl\PerformanceComparer.Designer.cs">
+      <DependentUpon>PerformanceComparer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Weatoo\WeatooForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Weatoo\WeatooForm.Designer.cs">
+      <DependentUpon>WeatooForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Weatoo\Tlc\TlcPerformanceViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Weatoo\Tlc\TlcPerformanceViewer.Designer.cs">
+      <DependentUpon>TlcPerformanceViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinControl\ConfigControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WinControl\ConfigControl.Designer.cs">
+      <DependentUpon>ConfigControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinControl\FileBrowserListBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WinControl\FileBrowserListBox.Designer.cs">
+      <DependentUpon>FileBrowserListBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinControl\FileBrowserTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WinControl\FileBrowserTextBox.Designer.cs">
+      <DependentUpon>FileBrowserTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinControl\ProgressLabelBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WinControl\ProgressLabelBar.Designer.cs">
+      <DependentUpon>ProgressLabelBar.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CustomControl\StatusStrip\PercentageStatusStrip.resx">
+      <DependentUpon>PercentageStatusStrip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource\Coarse.Vote.Svm.NoIntent.model" />
+    <EmbeddedResource Include="Resource\Fine.Vote.Svm.NoIntent.model" />
+    <EmbeddedResource Include="Resource\QS.BwcTrain.model" />
+    <EmbeddedResource Include="Resource\stopword.Bing.txt" />
+    <EmbeddedResource Include="Weatoo\ToolControl\FeatureFileGenPanel.resx">
+      <DependentUpon>FeatureFileGenPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Weatoo\ToolControl\FileCheckListForm.resx">
+      <DependentUpon>FileCheckListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Weatoo\ToolControl\LatexConverterPanel.resx">
+      <DependentUpon>LatexConverterPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Weatoo\ToolControl\PerformanceComparer.resx">
+      <DependentUpon>PerformanceComparer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Weatoo\WeatooForm.resx">
+      <DependentUpon>WeatooForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Weatoo\Tlc\TlcPerformanceViewer.resx">
+      <DependentUpon>TlcPerformanceViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinControl\ConfigControl.resx">
+      <DependentUpon>ConfigControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinControl\FileBrowserListBox.resx">
+      <DependentUpon>FileBrowserListBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinControl\FileBrowserTextBox.resx">
+      <DependentUpon>FileBrowserTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinControl\ProgressLabelBar.resx">
+      <DependentUpon>ProgressLabelBar.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BrambleMerged.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CommandLine.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="FastRankMerged.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="FeatureSelection.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MathUtil.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Microsoft.Bond.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Microsoft.Bond.Interfaces.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Microsoft.Cosmos.FrontEnd.Contract.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Microsoft.Hpc.Scheduler.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Microsoft.Hpc.Scheduler.Internal.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Microsoft.Hpc.Scheduler.Properties.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Microsoft.Hpc.Scheduler.Session.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Microsoft.Hpc.Scheduler.Store.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Microsoft.Live.Json.Signed.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Microsoft.WindowsAPICodePack.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Microsoft.WindowsAPICodePack.Shell.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MLTK.Native.Base.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MLTK.Native.HNN.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MLTK.Net.Base.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MLTK.Net.HNN.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="msvcp100.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="msvcp100d.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="msvcr100.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="msvcr100d.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Optimizer.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Petzold.Media3D.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Resource\stopword.txt" />
+    <Content Include="Resource\clsp_runtime_data\CWB_data\lex-usr.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\irregular_verb.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\lex\Chinese_Idiom.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\SharpNLP\EscapeCharacter.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\SharpNLP\RegularExpressionEscapeCharactors.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\SharpNLP\SharpNLP\OpenNLP.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\SharpNLP\SharpNLP\SharpEntropy.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\SharpNLP\SharpNLP\SharpWordNet.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\stanford\stanford-parser.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\stanford\stanford-postagger.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\wordnet.dict.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Resource\QS.WebisTrain.model" />
+    <EmbeddedResource Include="Resource\QS.Bergsma.model" />
+    <None Include="Resource\clsp_runtime_data\CWB_data\cwb.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Content Include="Resource\stanford\english-bidirectional-distsim.tagger">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\stanford\english-left3words-distsim.tagger">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\stanford\models\arabicFactored.ser.gz">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\stanford\models\chineseFactored.ser.gz">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\stanford\models\chinesePCFG.ser.gz">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\stanford\models\englishFactored.ser.gz">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\stanford\models\englishPCFG.caseless.ser.gz">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\stanford\models\englishPCFG.ser.gz">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\stanford\models\englishRNN.ser.gz">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\stanford\models\frenchFactored.ser.gz">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\stanford\models\germanFactored.ser.gz">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\stanford\models\germanPCFG.ser.gz">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\stanford\models\wsjFactored.ser.gz">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\stanford\models\wsjPCFG.ser.gz">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\stanford\models\wsjRNN.ser.gz">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\stanford\models\xinhuaFactored.ser.gz">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\stanford\models\xinhuaFactoredSegmenting.ser.gz">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\stanford\models\xinhuaPCFG.ser.gz">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Service References\NGramLmService\Lookup.disco" />
+    <None Include="Service References\NGramLmService\configuration91.svcinfo" />
+    <None Include="Service References\NGramLmService\configuration.svcinfo" />
+    <None Include="Service References\NGramLmService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Segment_Refine_Trans.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="System.Runtime.InteropServices.APIs.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="System.Windows.Forms.TreeListView.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ThreadLib.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TMSNlearnPrediction.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TMSNlearnScope.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TMSNStreams.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\BrambleMerged.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\BrambleMerged.pdb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\CommandLine.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\CommandLine.pdb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\ErrorExplorer.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\ErrorExplorer.pdb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\FastRankMerged.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\FastRankMerged.pdb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\FeatureSelection.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\FeatureSelection.pdb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\HNNMonitor.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\MathUtil.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\MathUtil.pdb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\MathUtil.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\Microsoft.Bond.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\Microsoft.Bond.Interfaces.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\Microsoft.Cosmos.FrontEnd.Contract.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\Microsoft.Hpc.Scheduler.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\Microsoft.Hpc.Scheduler.Internal.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\Microsoft.Hpc.Scheduler.Properties.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\Microsoft.Hpc.Scheduler.Session.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\Microsoft.Hpc.Scheduler.Store.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\Microsoft.Live.Json.Signed.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\Microsoft.Live.Json.Signed.pdb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\Microsoft.WindowsAPICodePack.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\Microsoft.WindowsAPICodePack.Shell.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\MLTK.Native.Base.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\MLTK.Native.HNN.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\MLTK.Net.Base.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\MLTK.Net.HNN.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\msvcp100.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\msvcp100d.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\msvcr100.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\msvcr100d.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\Optimizer.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\Optimizer.pdb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\Optimizer.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\Petzold.Media3D.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\ResultProcessor.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\ResultProcessor.pdb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\ScopeRuntime.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\ScopeRuntime.pdb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\System.Runtime.InteropServices.APIs.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\System.Windows.Forms.TreeListView.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\ThreadLib.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\ThreadLib.pdb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\TL.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\TLC.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\TLC.pdb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\TMSNlearn.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\TMSNlearn.pdb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\TMSNlearnPrediction.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\TMSNlearnPrediction.pdb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\TMSNlearnScope.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\TMSNlearnScope.pdb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\TMSNStreams.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\TMSNStreams.pdb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\UnmanagedLib.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\VcClient.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\Vectors.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\Vectors.pdb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\Vectors.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\ZedGraph.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UnmanagedLib.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="VcClient.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Vectors.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ZedGraph.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Index\Lucene\core\Analysis\Standard\StandardTokenizerImpl.jflex" />
+    <None Include="Index\Lucene\core\Lucene.Net.Search.RemoteSearchable.config" />
+    <None Include="Index\Lucene\core\Lucene.Net.Search.TestSort.config" />
+    <None Include="Index\Lucene\core\Lucene.Net.snk" />
+    <None Include="Index\Lucene\core\QueryParser\QueryParser.JJ" />
+    <None Include="Properties\DataSources\TrickyLib.WinForm.SVMWeight.datasource" />
+    <Content Include="Resource\SharpNLP\EnglishSD.nbin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\SharpNLP\ParseTree.exe.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\SharpNLP\SharpNLP\Models\Coref\acronyms">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\SharpNLP\SharpNLP\Models\Coref\cmodel.nbin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\SharpNLP\SharpNLP\Models\Coref\cmodel_nr.nbin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\SharpNLP\SharpNLP\Models\Coref\defmodel.nbin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\SharpNLP\SharpNLP\Models\Coref\defmodel_nr.nbin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\SharpNLP\SharpNLP\Models\Coref\fmodel.nbin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\SharpNLP\SharpNLP\Models\Coref\fmodel_nr.nbin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\SharpNLP\SharpNLP\Models\Coref\gen.fem">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\SharpNLP\SharpNLP\Models\Coref\gen.mal">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\SharpNLP\SharpNLP\Models\Coref\gen.nbin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\SharpNLP\SharpNLP\Models\Coref\imodel.nbin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\SharpNLP\SharpNLP\Models\Coref\imodel_nr.nbin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\SharpNLP\SharpNLP\Models\Coref\num.nbin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\SharpNLP\SharpNLP\Models\Coref\plmodel.nbin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\SharpNLP\SharpNLP\Models\Coref\plmodel_nr.nbin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\SharpNLP\SharpNLP\Models\Coref\pmodel.nbin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\SharpNLP\SharpNLP\Models\Coref\pmodel_nr.nbin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\SharpNLP\SharpNLP\Models\Coref\pnmodel.nbin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\SharpNLP\SharpNLP\Models\Coref\pnmodel_nr.nbin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\SharpNLP\SharpNLP\Models\Coref\sim.nbin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\SharpNLP\SharpNLP\Models\Coref\tmodel.nbin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\SharpNLP\SharpNLP\Models\Coref\tmodel_nr.nbin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\SharpNLP\SharpNLP\Models\EnglishChunk.nbin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\SharpNLP\SharpNLP\Models\EnglishPOS.nbin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\SharpNLP\SharpNLP\Models\EnglishSD.nbin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\SharpNLP\SharpNLP\Models\EnglishTok.nbin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\SharpNLP\SharpNLP\Models\NameFind\date.nbin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\SharpNLP\SharpNLP\Models\NameFind\location.nbin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\SharpNLP\SharpNLP\Models\NameFind\money.nbin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\SharpNLP\SharpNLP\Models\NameFind\organization.nbin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\SharpNLP\SharpNLP\Models\NameFind\percentage.nbin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\SharpNLP\SharpNLP\Models\NameFind\person.nbin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\SharpNLP\SharpNLP\Models\NameFind\time.nbin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\SharpNLP\SharpNLP\Models\parser\build.nbin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\SharpNLP\SharpNLP\Models\parser\check.nbin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\SharpNLP\SharpNLP\Models\parser\chunk.nbin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\SharpNLP\SharpNLP\Models\parser\head_rules">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\SharpNLP\SharpNLP\Models\parser\tag.nbin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\SharpNLP\SharpNLP\Models\parser\tagdict">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\SharpNLP\ToolsExample.exe.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Service References\NGramLmService\Lookup.wsdl" />
+    <None Include="Service References\NGramLmService\Lookup.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NGramLmService\Lookup1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NGramLmService\Lookup2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NGramLmService\LookupService.wsdl" />
+    <None Include="Service References\NGramService2\TrickyLib.NGramService2.TokenSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NGramService2\weblm.wsdl" />
+    <None Include="Service References\NGramService2\weblm.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NGramService2\weblm1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NGramService2\weblm2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NGramService2\weblm3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NGramService2\WiabService.wsdl" />
+    <None Include="Service References\NGramService\LookupService.wsdl" />
+    <None Include="Service References\NGramService\mex.wsdl" />
+    <None Include="Service References\NGramService\mex.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NGramService\mex1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NGramService\mex2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NGramService\mex3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Tools\Eval-Score-3.0.pl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\Eval-TTest-3.0.pl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\ErrorExplorer.exe.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\ResultProcessor.exe.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\TL.exe.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\TLC.exe.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\TLC\TMSNlearn.exe.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\NGramLmService\" />
+    <WCFMetadataStorage Include="Service References\NGramService2\" />
+    <WCFMetadataStorage Include="Service References\NGramService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\NGramService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\NGramService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\NGramService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\NGramService\mex.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\NGramService2\weblm.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\NGramService2\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\NGramService2\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\NGramService2\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Index\Lucene\core\Analysis\SnowBall\" />
+    <Folder Include="Parser\Wikipedia\" />
+    <Folder Include="SearchEngine\Daemon\" />
+    <Folder Include="SilverlightUserControl\" />
+    <Folder Include="Wikipedia\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Index\Lucene\core\Analysis\Standard\READ_BEFORE_REGENERATING.txt" />
+    <Content Include="Index\Lucene\contribution\Snowball\Docs\Index.html" />
+    <Content Include="Index\Lucene\contribution\Snowball\Lucene.Net\Analysis\Snowball\Package.html" />
+    <Content Include="Index\Lucene\contribution\Snowball\SF\Overview.html" />
+    <Content Include="Index\Lucene\contribution\Snowball\SF\Snowball\Ext\Package.html" />
+    <Content Include="Index\Lucene\contribution\Snowball\SF\Snowball\Package.html" />
+    <Content Include="Index\Lucene\contribution\Snowball\Xdocs\Index.xml" />
+    <Content Include="Index\Lucene\contribution\Snowball\Xdocs\Stylesheets\Project.xml" />
+    <Content Include="Tools\RankLib.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\Svm_Classify.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\svm_classify_32bit.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\Svm_Learn.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\svm_learn_32bit.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\svm_rank_classify_Fast.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\Svm_Rank_Learn_Fast.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

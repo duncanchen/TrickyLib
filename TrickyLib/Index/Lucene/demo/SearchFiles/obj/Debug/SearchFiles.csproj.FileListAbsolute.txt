@@ -1,0 +1,4 @@
+F:\Program\CSharp\Lucene\src\bin\demo\SearchFiles\Debug\NET40\SearchFiles.pdb
+F:\Program\CSharp\Lucene\src\src\demo\SearchFiles\obj\Debug\SearchFiles.pdb
+F:\Program\CSharp\Lucene\src\bin\demo\SearchFiles\Debug\NET40\SearchFiles.exe
+F:\Program\CSharp\Lucene\src\src\demo\SearchFiles\obj\Debug\SearchFiles.exe

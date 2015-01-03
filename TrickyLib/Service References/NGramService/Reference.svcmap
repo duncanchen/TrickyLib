@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="daecee75-03ab-44d5-a497-9d28f79b7a43" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://web-ngram.research.microsoft.com/Lookup.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="mex.xsd" MetadataType="Schema" ID="6bf7de12-8c86-4c1e-9350-2669e559b3dc" SourceId="1" SourceUrl="http://web-ngram.research.microsoft.com/Lookup.svc/mex?xsd=xsd1" />
+    <MetadataFile FileName="LookupService.wsdl" MetadataType="Wsdl" ID="72e82463-f504-41a5-87f2-e4b9a4badf3d" SourceId="1" SourceUrl="http://web-ngram.research.microsoft.com/Lookup.svc/mex?wsdl" />
+    <MetadataFile FileName="mex1.xsd" MetadataType="Schema" ID="53334057-2536-4304-9b14-3b0dde4fe8c7" SourceId="1" SourceUrl="http://web-ngram.research.microsoft.com/Lookup.svc/mex?xsd=xsd2" />
+    <MetadataFile FileName="mex2.xsd" MetadataType="Schema" ID="12c3710f-b41f-424e-aa02-2e8782e6361e" SourceId="1" SourceUrl="http://web-ngram.research.microsoft.com/Lookup.svc/mex?xsd=xsd3" />
+    <MetadataFile FileName="mex.wsdl" MetadataType="Wsdl" ID="f1585fb3-2faa-4a3d-9dc8-35ae1a9986a1" SourceId="1" SourceUrl="http://web-ngram.research.microsoft.com/Lookup.svc/mex?wsdl=wsdl0" />
+    <MetadataFile FileName="mex3.xsd" MetadataType="Schema" ID="e4f213aa-c4cb-418f-aa7c-5aafa2248a72" SourceId="1" SourceUrl="http://web-ngram.research.microsoft.com/Lookup.svc/mex?xsd=xsd0" />
+    <MetadataFile FileName="mex.disco" MetadataType="Disco" ID="9773c1e1-6a1f-4fff-a809-55be75058496" SourceId="1" SourceUrl="http://web-ngram.research.microsoft.com/Lookup.svc/mex?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
