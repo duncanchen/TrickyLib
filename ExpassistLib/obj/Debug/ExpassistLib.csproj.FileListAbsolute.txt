@@ -1,0 +1,5 @@
+D:\programs\TrickLib\TrickyLib\ExpassistLib\obj\Debug\ExpassistLib.csprojResolveAssemblyReference.cache
+D:\programs\TrickLib\TrickyLib\ExpassistLib\bin\Debug\ExpassistLib.dll
+D:\programs\TrickLib\TrickyLib\ExpassistLib\bin\Debug\ExpassistLib.pdb
+D:\programs\TrickLib\TrickyLib\ExpassistLib\obj\Debug\ExpassistLib.dll
+D:\programs\TrickLib\TrickyLib\ExpassistLib\obj\Debug\ExpassistLib.pdb
